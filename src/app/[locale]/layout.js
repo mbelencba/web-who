@@ -44,12 +44,19 @@ export default async function RootLayout({ children, params }) {
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
+  let messages;
+  try {
+    messages = (await import(`@/messages/${locale}.json`)).default;
+  } catch (error) {
+    console.error('Error cargando mensajes para locale:', locale);
+    notFound();
+  }
   return (
     <html lang={locale}>
       <body
         className={`${rubik.variable} antialiased`}
       >
-        <NextIntlClientProvider>
+        <NextIntlClientProvider locale={locale} messages={messages}>
           <NavBar />
           {children}
           <Footer />
