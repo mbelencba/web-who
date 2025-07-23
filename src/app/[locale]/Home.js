@@ -1,12 +1,12 @@
 import {useTranslations} from 'next-intl';
-import Header from './components/Header';
-import QuieneSomos from './components/QuieneSomos';
-import Servicios from './components/Servicios';
-import Industrias from './components/Industrias';
-import Empresas from './components/Empresas';
-import Nosotros from './components/Nosotros';
-import Maps from './components/Maps';
-import Contacto from './components/Contacto';
+import Header from './Header';
+import QuieneSomos from './QuieneSomos';
+import Servicios from './Servicios';
+import Industrias from './Industrias';
+import Empresas from './Empresas';
+import Nosotros from './Nosotros';
+import Maps from './Maps';
+import Contacto from './Contacto';
  
 export default function Home() {
   const t = useTranslations('HomePage');
