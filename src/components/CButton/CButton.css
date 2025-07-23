@@ -1,0 +1,65 @@
+.button {
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.button--primary {
+  background-color: var(--color-who2);
+  box-shadow: 2px 2px 0px var(--color-who);
+  color: white;
+  min-width: 300px;
+  min-height: 50px;
+  transition: all 0.3s ease;
+}
+
+.button--primary:hover {
+  box-shadow: 4px 4px 0px var(--color-who);
+  opacity: 0.95;
+}
+
+.button--secondary {
+  background-color: white;
+  box-shadow: 2px 2px 0px var(--color-who);
+  color: var(--color-who2);
+  min-width: 300px;
+  min-height: 50px;
+  transition: all 0.3s ease;
+}
+
+.button--secondary:hover {
+  box-shadow: 4px 4px 0px var(--color-who);
+  opacity: 0.95;
+}
+
+.button--terceareo {
+  background-color: var(--color-whoVV);
+  box-shadow: 2px 2px 0px var(--color-whoV);
+  color: white;
+  min-width: 300px;
+  min-height: 50px;
+  transition: all 0.3s ease;
+}
+
+.button--terceareo:hover {
+  box-shadow: 4px 4px 0px var(--color-whoV);
+  opacity: 0.95;
+}
+
+.button--text {
+  background-color: transparent;
+  color: #1e2939;
+  font-size: 1.3rem;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.button--text:hover {
+  color: #3872c8;
+}

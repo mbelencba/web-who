@@ -1,0 +1,95 @@
+.navbar {
+  width: 100%;
+  left: 0;
+  right: 0;
+  display: grid;
+  align-items: center;
+  justify-content: space-between;
+  grid-template-areas:
+    "logo . hamburguesa"
+    "menu menu menu";
+  grid-template-rows: auto 0fr;
+  transition: grid-template-rows 0.8s ease;
+}
+
+.logo {
+  grid-area: logo;
+  align-self: start;
+}
+.menu {
+  display: none;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem 0;
+  align-items: center;
+  grid-area: menu;
+  justify-self: center;
+  overflow: hidden;
+  animation: actionMenu 0.8s ease-in-out;
+}
+.hamburguesa {
+  grid-area: hamburguesa;
+  align-self: start;
+}
+
+/* Cuando está activo el menú */
+.navbar.menu-active {
+  grid-template-rows: auto 1fr;
+  .menu {
+    display: flex;
+  }
+}
+
+@keyframes actionMenu {
+  0% {
+    display: flex;
+    color: transparent;
+  }
+  90%{
+    display: flex;
+    color: transparent;
+  }
+  100% {
+    display: flex;
+    color: black;
+  }
+}
+
+
+/* Media query para desktop */
+@media (min-width: 768px) {
+  .navbar {
+    grid-template-areas: "logo menu session";
+    grid-template-rows: auto;
+  }
+
+  .hamburguesa {
+    display: none;
+  }
+
+  .menu {
+    overflow: visible;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar {
+    position: fixed;
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin: 0;
+    align-items: center;
+    justify-self: center;
+    overflow: visible;
+  }
+}
